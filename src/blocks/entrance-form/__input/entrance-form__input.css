@@ -1,0 +1,17 @@
+.entrance-form__input {
+    border-top: none;
+    border-left: none;
+    border-right: none;
+    background-color: #000000;
+    border-bottom: 2px solid #CCCCCC;
+    color: #CCCCCC;
+    height: 37px;
+    width: 358px;
+    margin: 0;
+    box-sizing: border-box;
+    font-family: "Inter", Arial, sans-serif;
+    font-style: normal;
+    font-weight: normal;
+    font-size: 14px;
+    line-height: 17px;
+}

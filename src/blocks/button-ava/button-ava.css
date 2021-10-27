@@ -1,0 +1,26 @@
+.button-ava {
+  background-repeat: no-repeat;
+  background-position: center;
+  box-sizing: border-box;
+  background-color: #000;
+  width: 100%;
+  height: 100%;
+  margin: 0;
+  border: none;
+  border-radius: 50%;
+  position: absolute;
+  top: 0;
+  left: 0;
+  opacity: 0;
+  transition: opacity .7s ease;
+  outline: none;
+}
+
+.button-ava:hover {
+  opacity: 0.8;
+  background-image: url(../../images/Ava_Edit.png);
+  background-size: 26px 26px;
+  background-repeat: no-repeat;
+  background-position: center;
+  cursor: pointer;
+}

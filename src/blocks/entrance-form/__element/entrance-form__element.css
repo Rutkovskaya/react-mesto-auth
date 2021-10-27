@@ -1,0 +1,6 @@
+.entrance-form__element {
+    margin-top: 20px;
+}
+.entrance-form__element:first-of-type {
+    margin-top: 40px;
+}
