@@ -45,8 +45,12 @@ function App() {
   function handleCardLike(card) {
     const isLiked = card.likes.some(i => i._id === currentUser._id);
 
-    api.changeLikeStatus(card._id, !isLiked).then((newCard) => {
+    api.changeLikeStatus(card._id, !isLiked)
+    .then((newCard) => {
       setCards((state) => state.map((c) => c._id === card._id ? newCard : c));
+    })
+    .catch((err) => {
+      console.error(err);
     });
   }
 
@@ -176,16 +180,17 @@ function App() {
     entrance.register({ password, email })
       .then((res) => {
         if (res) {
-          setIsInfoTooltipOpen(true)
           setIsAuthorized(true)
           history.push('/sign-in')
         }
       })
       .catch((err) => {
-        setIsInfoTooltipOpen(true)
         setIsAuthorized(false)
         console.log(err)
       })
+      .finally(
+        setIsInfoTooltipOpen(true)
+      )
   }
 
   const history = useHistory();
